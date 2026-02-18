@@ -31,10 +31,13 @@ body::before {
   position: fixed;
   inset: 0;
   z-index: -2;
-  background-image: url("images/charity-of-war-cover.jpg");
+  background-image:
+    linear-gradient(180deg, rgba(231, 233, 236, 0.75), rgba(213, 217, 222, 0.78)),
+    url("images/charity-of-war-cover.jpg"),
+    url("images/charity-of-war-cover.png");
   background-size: cover;
   background-position: center;
-  opacity: 0.1;
+  opacity: 0.2;
   filter: grayscale(100%) contrast(110%);
   pointer-events: none;
 }
