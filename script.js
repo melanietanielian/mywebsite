@@ -21,28 +21,10 @@ revealItems.forEach((item, idx) => {
 // Edit this list to add/update announcements.
 const newsItems = [
   {
-    date: "March 2026",
-    title: "New publication in Journal of Genocide Research",
-    summary: "Latest article now available online with DOI and journal access.",
-    link: "https://doi.org/10.1080/14623528.2024.2310866",
-    image: "images/research.svg",
-    imageAlt: "Publication announcement",
-  },
-  {
-    date: "February 2026",
-    title: "Book chapter published: Hungry for Change",
-    summary:
-      "New chapter co-authored with Mustafa Aksakal on civilian demands and food politics.",
-    link: "https://www.cambridge.org/core/books/abs/hunger-redraws-the-map/hungry-for-change/8BCAC92892EB977BBDC1F8A10467660A",
-    image: "images/archive.svg",
-    imageAlt: "Book chapter announcement",
-  },
-  {
-    date: "January 2026",
-    title: "Event: Public lecture on wartime humanitarianism",
-    summary:
-      "Upcoming lecture and discussion on famine, aid, and urban governance in wartime Beirut.",
-    link: "publications.html",
+    date: "Upcoming Event",
+    title: "Event Announcement",
+    summary: "Add your event title, date, and details here.",
+    link: "#",
     image: "images/Flyer.png",
     imageAlt: "Event flyer",
   },
@@ -52,6 +34,7 @@ const newsDate = document.querySelector("#news-date");
 const newsTitle = document.querySelector("#news-title");
 const newsSummary = document.querySelector("#news-summary");
 const newsLink = document.querySelector("#news-link");
+const newsImageWrap = document.querySelector(".news-image-wrap");
 const newsImage = document.querySelector("#news-image");
 const newsPrev = document.querySelector("#news-prev");
 const newsNext = document.querySelector("#news-next");
@@ -65,6 +48,7 @@ function renderNews(idx) {
     !newsTitle ||
     !newsSummary ||
     !newsLink ||
+    !newsImageWrap ||
     !newsImage ||
     !newsItems.length
   ) {
@@ -76,8 +60,21 @@ function renderNews(idx) {
   newsTitle.textContent = item.title;
   newsSummary.textContent = item.summary;
   newsLink.href = item.link;
-  newsImage.src = item.image || "images/research.svg";
-  newsImage.alt = item.imageAlt || item.title;
+
+  if (item.link && item.link !== "#") {
+    newsLink.style.display = "inline";
+    newsLink.textContent = "Read more";
+  } else {
+    newsLink.style.display = "none";
+  }
+
+  if (item.image) {
+    newsImageWrap.style.display = "block";
+    newsImage.src = item.image;
+    newsImage.alt = item.imageAlt || item.title;
+  } else {
+    newsImageWrap.style.display = "none";
+  }
 }
 
 function nextNews() {
