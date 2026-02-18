@@ -34,7 +34,7 @@ body::before {
   background-size: cover;
   background-position: center;
   filter: grayscale(100%) contrast(105%);
-  opacity: 0.34;
+  opacity: 0.52;
   pointer-events: none;
 }
 
@@ -43,7 +43,7 @@ body::after {
   position: fixed;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(180deg, rgba(243, 245, 247, 0.72), rgba(236, 238, 241, 0.76));
+  background: linear-gradient(180deg, rgba(243, 245, 247, 0.52), rgba(236, 238, 241, 0.56));
   pointer-events: none;
 }
 
