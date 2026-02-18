@@ -237,6 +237,28 @@ h1 {
   font-weight: 700;
 }
 
+.news-rotator {
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  padding: 1rem;
+}
+
+.news-rotator h3 {
+  margin: 0.25rem 0 0.35rem;
+  font-family: "Source Serif 4", serif;
+  font-size: 1.12rem;
+}
+
+#news-summary {
+  margin: 0;
+}
+
+.news-controls {
+  display: flex;
+  gap: 0.55rem;
+  margin-top: 0.9rem;
+}
+
 .image-grid img {
   width: 100%;
   height: 220px;
