@@ -43,7 +43,7 @@ const newsItems = [
     summary:
       "Upcoming lecture and discussion on famine, aid, and urban governance in wartime Beirut.",
     link: "publications.html",
-    image: "images/flyer.jpg",
+    image: "images/Flyer.png",
     imageAlt: "Event flyer",
   },
 ];
