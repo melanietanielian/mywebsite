@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Campus placeholder image">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#e2e8f0" />
+      <stop offset="100%" stop-color="#cbd5e1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#g)" />
+  <rect x="180" y="250" width="840" height="420" rx="18" fill="#a1a1aa" opacity="0.85" />
+  <text x="600" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="52" fill="#111827">Campus Image</text>
+</svg>
