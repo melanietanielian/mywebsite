@@ -195,6 +195,18 @@ h1 {
   line-height: 1.55;
 }
 
+.card a,
+.work-grid a {
+  color: var(--accent-strong);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.card a:hover,
+.work-grid a:hover {
+  text-decoration: underline;
+}
+
 .panel-alt {
   background:
     linear-gradient(145deg, rgba(255, 227, 204, 0.5), rgba(232, 249, 238, 0.35));
