@@ -1,13 +1,12 @@
 :root {
-  --bg: #dcdee2;
-  --surface: #f3f4f6;
-  --surface-soft: #eaedf0;
-  --ink: #1e2329;
-  --muted: #4f5863;
-  --line: #b9c0c9;
-  --line-strong: #949da8;
-  --accent: #8a1f2e;
-  --accent-hover: #6d1824;
+  --bg: #eceef1;
+  --surface: #f7f8fa;
+  --surface-2: #eef1f4;
+  --text: #1f2933;
+  --muted: #52606d;
+  --line: #c7ced6;
+  --accent: #8b1e2d;
+  --accent-2: #6f1723;
 }
 
 *,
@@ -17,44 +16,26 @@
 }
 
 body {
-  position: relative;
-  isolation: isolate;
   margin: 0;
   min-height: 100vh;
+  background: linear-gradient(180deg, #f3f5f7 0%, var(--bg) 100%);
+  color: var(--text);
   font-family: "Source Sans 3", sans-serif;
-  color: var(--ink);
-  background: linear-gradient(180deg, #e7e9ec 0%, var(--bg) 45%, #d5d9de 100%);
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-  background-image:
-    linear-gradient(180deg, rgba(231, 233, 236, 0.75), rgba(213, 217, 222, 0.78)),
-    url("images/charity-of-war-cover.jpg"),
-    url("images/charity-of-war-cover.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.2;
-  filter: grayscale(100%) contrast(110%);
-  pointer-events: none;
 }
 
 .site-header,
 main,
 .site-footer {
   width: min(1080px, 92vw);
-  margin-inline: auto;
+  margin: 0 auto;
 }
 
 .site-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 1rem 0;
-  border-bottom: 2px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 
 .brand {
@@ -65,12 +46,12 @@ main,
 
 nav {
   display: flex;
-  gap: 1.2rem;
+  gap: 1rem;
 }
 
 nav a {
-  text-decoration: none;
   color: var(--muted);
+  text-decoration: none;
   font-weight: 600;
 }
 
@@ -81,108 +62,100 @@ nav a:hover {
 .hero {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  gap: 1.1rem;
+  gap: 1rem;
   align-items: center;
-  padding: 3.3rem 0 2rem;
+  padding: 2.8rem 0 1.8rem;
 }
 
 .hero-content {
-  max-width: 780px;
-}
-
-.hero-image-wrap {
-  border: 1px solid var(--line);
-  border-radius: 2px;
-  background: var(--surface);
-  padding: 0.45rem;
-}
-
-.hero-image {
-  display: block;
-  width: 100%;
-  height: 100%;
-  max-height: 420px;
-  object-fit: cover;
-  border-radius: 2px;
+  max-width: 760px;
 }
 
 .eyebrow {
   margin: 0;
   color: var(--accent);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
   font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 h1,
 h2 {
-  font-family: "Source Serif 4", serif;
-  line-height: 1.15;
   margin: 0;
+  line-height: 1.15;
+  font-family: "Source Serif 4", serif;
 }
 
 h1 {
   margin-top: 0.6rem;
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(2rem, 5vw, 3.4rem);
 }
 
 .hero-copy {
+  margin: 1rem 0 1.4rem;
   color: var(--muted);
-  max-width: 62ch;
-  line-height: 1.7;
-  font-size: 1.05rem;
-  margin: 1rem 0 1.5rem;
+  line-height: 1.65;
+}
+
+.hero-image-wrap {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  padding: 0.4rem;
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 0.7rem;
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 2px;
-  padding: 0.7rem 1.05rem;
+  padding: 0.65rem 1rem;
+  border: 1px solid transparent;
   font-weight: 700;
   text-decoration: none;
-  border: 1px solid transparent;
-  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .btn-primary {
   background: var(--accent);
-  color: #f8f8f8;
+  color: #fff;
 }
 
 .btn-primary:hover {
-  background: var(--accent-hover);
+  background: var(--accent-2);
 }
 
 .btn-secondary {
-  border-color: var(--line-strong);
-  color: var(--ink);
+  border-color: var(--line);
+  color: var(--text);
   background: transparent;
 }
 
 .btn-secondary:hover {
-  background: var(--surface-soft);
+  background: var(--surface-2);
 }
 
 .panel {
-  margin-top: 1.25rem;
-  border: 2px solid var(--line);
-  border-radius: 2px;
-  background: rgba(243, 244, 246, 0.92);
-  padding: 1.2rem;
+  margin-top: 1.1rem;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  padding: 1.1rem;
 }
 
 .panel h2 {
-  margin-bottom: 0.9rem;
-  font-size: clamp(1.4rem, 3vw, 1.95rem);
+  margin-bottom: 0.8rem;
+  font-size: clamp(1.35rem, 3vw, 1.9rem);
 }
 
 .card-grid,
@@ -197,9 +170,8 @@ h1 {
 .work-grid article,
 .post-item {
   border: 1px solid var(--line);
-  border-radius: 2px;
+  background: var(--surface-2);
   padding: 1rem;
-  background: rgba(234, 237, 240, 0.94);
 }
 
 .card h3,
@@ -207,72 +179,66 @@ h1 {
 .post-item h3 {
   margin: 0;
   font-family: "Source Serif 4", serif;
-  font-size: 1.08rem;
+  font-size: 1.05rem;
 }
 
 .card p,
 .work-grid p,
 .post-item p {
-  margin: 0.6rem 0 0;
-  color: var(--muted);
+  margin: 0.55rem 0 0;
   line-height: 1.55;
+  color: var(--muted);
 }
 
 .card a,
 .work-grid a,
 .post-item a {
   color: var(--accent);
-  font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 2px;
+  font-weight: 700;
 }
 
 .card a:hover,
 .work-grid a:hover,
 .post-item a:hover {
-  color: var(--accent-hover);
+  color: var(--accent-2);
 }
 
-.panel-alt {
-  background: #eef1f4;
+.tag {
+  color: var(--accent);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .image-grid img {
   width: 100%;
   height: 220px;
   object-fit: cover;
-  border-radius: 2px;
   border: 1px solid var(--line);
-  background: var(--surface-soft);
-}
-
-.tag {
-  color: var(--accent);
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
+  background: var(--surface-2);
 }
 
 .site-footer {
-  margin: 2rem auto;
+  margin: 1.8rem auto;
   text-align: center;
-  padding: 1.7rem 1rem;
-  border-top: 2px solid var(--line);
-  background: rgba(243, 244, 246, 0.85);
+  padding: 1.6rem 0.8rem;
+  border-top: 1px solid var(--line);
 }
 
 .site-footer h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .subpage-main {
   min-height: 68vh;
-  padding-top: 1.25rem;
+  padding-top: 1rem;
 }
 
 .subpage-main h1 {
-  font-size: clamp(1.85rem, 4vw, 2.85rem);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
 }
 
 .post-list {
@@ -282,7 +248,7 @@ h1 {
 
 .reveal {
   opacity: 0;
-  transform: translateY(12px);
+  transform: translateY(10px);
 }
 
 .reveal.is-visible {
@@ -298,15 +264,12 @@ h1 {
 
   .hero {
     grid-template-columns: 1fr;
+    padding-top: 2rem;
   }
 
   .card-grid,
   .work-grid,
   .image-grid {
     grid-template-columns: 1fr;
-  }
-
-  .hero {
-    padding-top: 2.2rem;
   }
 }
