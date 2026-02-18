@@ -249,6 +249,37 @@ h1 {
   margin-bottom: 1rem;
 }
 
+.subpage-main {
+  min-height: 68vh;
+  padding-top: 1.4rem;
+}
+
+.subpage-main h1 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.post-list {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.post-item {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface-soft);
+  padding: 1rem;
+}
+
+.post-item h3 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.post-item p {
+  margin: 0.55rem 0 0;
+  color: var(--muted);
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(12px);
