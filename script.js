@@ -25,7 +25,7 @@ const newsItems = [
     title: "Upcoming Event New Book on Academic Freedom and Activism on Campus Feb 23rd 7pm Online",
     summary: "Online event on Feb 23rd at 7pm.",
     link: "#",
-    image: "images/flyer.jpg",
+    image: "images/Chandler.png",
     imageAlt: "Event flyer",
   },
 ];
