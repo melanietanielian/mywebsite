@@ -21,7 +21,7 @@ revealItems.forEach((item, idx) => {
 // Edit this list to add/update announcements.
 const newsItems = [
   {
-    date: "Upcoming Event",
+    date: "February 23, 2026",
     title: "Upcoming Event New Book on Academic Freedom and Activism on Campus Feb 23rd 7pm Online",
     summary: "Online event on Feb 23rd at 7pm.",
     link: "#",
