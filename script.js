@@ -22,8 +22,8 @@ revealItems.forEach((item, idx) => {
 const newsItems = [
   {
     date: "Upcoming Event",
-    title: "Event Announcement",
-    summary: "Add your event title, date, and details here.",
+    title: "Upcoming Event New Book on Academic Freedom and Activism on Campus Feb 23rd 7pm Online",
+    summary: "Online event on Feb 23rd at 7pm.",
     link: "#",
     image: "images/Flyer.png",
     imageAlt: "Event flyer",
@@ -41,6 +41,36 @@ const newsNext = document.querySelector("#news-next");
 
 let newsIndex = 0;
 let newsTimer;
+
+function setNewsImage(item) {
+  if (!item.image) {
+    newsImageWrap.style.display = "none";
+    return;
+  }
+
+  const candidates = [item.image];
+  if (item.image === "images/Flyer.png") {
+    candidates.push("images/flyer.png", "Flyer.png", "flyer.png");
+  }
+
+  let i = 0;
+  function tryNext() {
+    if (i >= candidates.length) {
+      newsImageWrap.style.display = "none";
+      return;
+    }
+    newsImageWrap.style.display = "block";
+    newsImage.src = candidates[i];
+    newsImage.alt = item.imageAlt || item.title;
+    i += 1;
+  }
+
+  newsImage.onerror = tryNext;
+  newsImage.onload = () => {
+    newsImage.onerror = null;
+  };
+  tryNext();
+}
 
 function renderNews(idx) {
   if (
@@ -68,13 +98,7 @@ function renderNews(idx) {
     newsLink.style.display = "none";
   }
 
-  if (item.image) {
-    newsImageWrap.style.display = "block";
-    newsImage.src = item.image;
-    newsImage.alt = item.imageAlt || item.title;
-  } else {
-    newsImageWrap.style.display = "none";
-  }
+  setNewsImage(item);
 }
 
 function nextNews() {
