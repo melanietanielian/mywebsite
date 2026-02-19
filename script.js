@@ -25,7 +25,7 @@ const newsItems = [
     title: "Upcoming Event New Book on Academic Freedom and Activism on Campus Feb 23rd 7pm Online",
     summary: "Online event on Feb 23rd at 7pm.",
     link: "#",
-    image: "images/Flyer.png",
+    image: "images/flyer.jpg",
     imageAlt: "Event flyer",
   },
 ];
@@ -49,8 +49,14 @@ function setNewsImage(item) {
   }
 
   const candidates = [item.image];
-  if (item.image === "images/Flyer.png") {
-    candidates.push("images/flyer.png", "Flyer.png", "flyer.png");
+  if (item.image === "images/flyer.jpg") {
+    candidates.push(
+      "images/Flyer.jpg",
+      "images/flyer.jpeg",
+      "images/Flyer.jpeg",
+      "images/flyer.png",
+      "images/Flyer.png"
+    );
   }
 
   let i = 0;
