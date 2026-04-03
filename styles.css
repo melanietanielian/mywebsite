@@ -229,6 +229,14 @@ h1 {
   color: var(--accent-2);
 }
 
+.card-link h3 a {
+  text-decoration: none;
+}
+
+.card-link h3 a:hover {
+  text-decoration: underline;
+}
+
 .tag {
   color: var(--accent);
   font-size: 0.72rem;
@@ -307,6 +315,50 @@ h1 {
   font-size: clamp(1.8rem, 4vw, 2.8rem);
 }
 
+.project-hero,
+.project-layout {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.project-image-frame,
+.project-text,
+.project-notes {
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+}
+
+.project-image-frame {
+  padding: 0.5rem;
+}
+
+.project-image {
+  display: block;
+  width: 100%;
+  min-height: 360px;
+  object-fit: cover;
+  background: linear-gradient(180deg, #f2f4f7 0%, #dde4ea 100%);
+}
+
+.project-text,
+.project-notes {
+  padding: 1rem;
+}
+
+.project-text h2,
+.project-notes h2 {
+  margin-bottom: 0.7rem;
+}
+
+.project-text p,
+.project-notes p {
+  margin: 0.7rem 0 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
 .post-list {
   display: grid;
   gap: 0.8rem;
@@ -340,6 +392,11 @@ h1 {
   }
 
   .news-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .project-hero,
+  .project-layout {
     grid-template-columns: 1fr;
   }
 }
