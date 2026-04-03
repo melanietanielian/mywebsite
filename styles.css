@@ -362,7 +362,7 @@ h1 {
 .publication-feature {
   display: grid;
   grid-column: 1 / -1;
-  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-columns: 160px minmax(0, 1fr);
   gap: 1rem;
   align-items: start;
 }
@@ -370,24 +370,25 @@ h1 {
 .publication-feature-image-wrap {
   border: 1px solid var(--line);
   background: var(--surface);
-  padding: 0.35rem;
+  padding: 0.3rem;
+  width: 160px;
 }
 
 .publication-feature-image {
   display: block;
   width: 100%;
   height: auto;
-  max-height: 280px;
+  max-height: 210px;
   object-fit: contain;
   background: #fff;
 }
 
 .publication-feature-full {
-  grid-template-columns: minmax(220px, 0.8fr) 1.4fr;
+  grid-template-columns: 170px minmax(0, 1fr);
 }
 
 .publication-feature-full .publication-feature-image {
-  max-height: 220px;
+  max-height: 230px;
 }
 
 .cv-page {
