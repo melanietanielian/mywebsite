@@ -359,6 +359,79 @@ h1 {
   line-height: 1.65;
 }
 
+.cv-page {
+  display: grid;
+  gap: 1.1rem;
+}
+
+.cv-section {
+  display: grid;
+  gap: 1rem;
+}
+
+.cv-list,
+.cv-columns {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.cv-columns {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.cv-item,
+.cv-card {
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  padding: 1rem;
+}
+
+.cv-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: start;
+}
+
+.cv-item h3,
+.cv-card h3 {
+  margin: 0;
+  font-family: "Source Serif 4", serif;
+  font-size: 1.05rem;
+}
+
+.cv-item p,
+.cv-card p,
+.cv-bullets li {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.cv-item p {
+  margin: 0.45rem 0 0;
+}
+
+.cv-date {
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.86rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.cv-bullets {
+  margin: 0.7rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.cv-bullets li + li {
+  margin-top: 0.55rem;
+}
+
+.cv-copy {
+  margin: 0.7rem 0 0;
+}
+
 .post-list {
   display: grid;
   gap: 0.8rem;
@@ -398,5 +471,14 @@ h1 {
   .project-hero,
   .project-layout {
     grid-template-columns: 1fr;
+  }
+
+  .cv-columns,
+  .cv-item {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-date {
+    white-space: normal;
   }
 }
