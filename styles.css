@@ -376,13 +376,18 @@ h1 {
 .publication-feature-image {
   display: block;
   width: 100%;
-  height: 100%;
-  max-height: 360px;
-  object-fit: cover;
+  height: auto;
+  max-height: 280px;
+  object-fit: contain;
+  background: #fff;
 }
 
 .publication-feature-full {
   grid-template-columns: minmax(220px, 0.8fr) 1.4fr;
+}
+
+.publication-feature-full .publication-feature-image {
+  max-height: 220px;
 }
 
 .cv-page {
